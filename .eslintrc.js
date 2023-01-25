@@ -124,7 +124,16 @@ module.exports = {
             group: 'external',
             position: 'before',
           },
-          { pattern: 'generated/**', group: 'internal', position: 'after' },
+          {
+            pattern: '@GeneralBackend/**',
+            group: 'internal',
+            position: 'after',
+          },
+          {
+            pattern: '@AlgorithmBackend/**',
+            group: 'internal',
+            position: 'after',
+          },
           { pattern: 'assets/**', group: 'internal', position: 'after' },
           { pattern: 'pages', group: 'internal', position: 'after' },
           { pattern: 'pages/**', group: 'internal', position: 'after' },

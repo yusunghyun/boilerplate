@@ -11,11 +11,19 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "@Common": ["src/components/Common"],
+      "@Common/*": ["src/components/Common/*"],
+      "algo-care/*": ["src/algocare_modules/*"],
+      "@AlgorithmBackend": ["src/graphql/AlgorithmBackend/generated.tsx"],
+      "@GeneralBackend": ["src/graphql/GeneralBackend/generated.tsx"],
+      "*": ["src/*"]
+    } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
     "typeRoots": ["./node_modules/@types"]
   },
   "include": ["src/**/*", "**/*.ts", "**/*.tsx"],

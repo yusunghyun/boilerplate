@@ -1,0 +1,23 @@
+overwrite: true
+generates:
+  src/graphql/GeneralBackend/generated.tsx:
+    schema:
+      - ${GRAPHQL_API_URL}
+    documents: 'src/graphql/GeneralBackend/**/*.graphql'
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+  src/graphql/AlgorithmBackend/generated.tsx:
+    schema:
+      - ${ALGORITHM_GRAPHQL_API_URL}
+    documents: 'src/graphql/AlgorithmBackend/**/*.graphql'
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+
+config:
+  scalars:
+    DateTime: Date
+    Date: string
